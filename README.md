@@ -1,5 +1,9 @@
 Stupid v0.1 - The dumbest file format fuzzer in the whole world
 ===============================================================
+
+![Alt text](http://1.bp.blogspot.com/-pP0pSl5dTp4/U7fY1275h2I/AAAAAAAAA3Q/pi00kVZCR0I/s1600/1.png)
+
+
 Stupid was developed in late 2011 to automate fuzzing of different file formats( mainly Music/Video Players etc).
 
 Licence
