@@ -18,7 +18,7 @@ Debasish Mandal <debasishm89 [at] gmail.com> wrote this file. As long as you ret
 
 Running this Fuzzer
 ===================
-This was developed and tested with **Python 2.7(x86)**. So it's recommended to use the same version of python. Also make sure **pydbg(x86)** also installed on the system. 
+Stupid was developed and tested with **Python 2.7(x86)**. So it's recommended to use the same version of python. Also make sure **pydbg(x86)** installed on the system. 
 
 ![Alt text](http://1.bp.blogspot.com/-pP0pSl5dTp4/U7fY1275h2I/AAAAAAAAA3Q/pi00kVZCR0I/s1600/1.png)
 
@@ -40,5 +40,18 @@ To monitor target application for different types of crashes (access violation),
 
 Reprducing Crashes
 ==================
-
 Crash files and crash information can be found in "Crashes" folder which can be used to reproduce app crashes.
+
+
+Bug Fixes/Thanks/Hate Emails
+============================
+Send them to debasishm89 [at] gmail.com
+
+
+Cheers
+======
+
+Cheers and Happy Fuzzing
+
+Debasish Mandal (*http://www.debasish.in*)
+
