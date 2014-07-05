@@ -17,7 +17,7 @@ This software is licenced under **BEER WARE** licence although the following lib
 ![Alt text](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/BeerWare_Logo.svg/170px-BeerWare_Logo.svg.png)
 
 
-Debasish Mandal <debasishm89 [at] gmail.com> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return Debasish Mandal.
+**Debasish Mandal** <debasishm89 [at] gmail.com> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return Debasish Mandal.
 
 
 Running this Fuzzer
