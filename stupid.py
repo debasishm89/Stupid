@@ -28,12 +28,12 @@ import time
 
 ######################   Fuzzer Configuration(Change These parameters Based on your requirement) ##############
 
-timeout = 1										# Run target application for 1 seconds and look for Access violation.
-temp_dir = 'c:\\temp\\'							# Temporary Directory
-basefile_dir = 'c:\\bases'						# This directory will contain all base files
+timeout = 1						# Run target application for 1 seconds and look for Access violation.
+temp_dir = 'c:\\temp\\'					# Temporary Directory
+basefile_dir = 'c:\\bases'				# This directory will contain all base files
 programname = "c:\\Windows\\notepad.exe"		# Full target application binary path
-command_line_arg = ""							# Command line arguments (if any required for programname)
-fuzzratio = float(0.09)							# percentage of file size bytes to fuzz
+command_line_arg = ""					# Command line arguments (if any required for programname)
+fuzzratio = float(0.09)					# percentage of file size bytes to fuzz
 
 ###############################################################################################################
 def printBanner():
@@ -59,16 +59,16 @@ def mutate(data):
 		for j in range(data_to_be_fuzzed):		#Iterate all bytes
 			randbyte = random.randrange(256)	#Random character
 			ran = random.randrange(len(data))	#Random offset
-			b[ran] = '%c'%(randbyte)			#Replace
-		mutated =''.join(b)						#Append
+			b[ran] = '%c'%(randbyte)		#Replace
+		mutated =''.join(b)				#Append
 	if case == 1:
 		# Bit flip randomly chosen bytes
 		for j in range(data_to_be_fuzzed):		#Iterate
 			ran = random.randrange(len(data))	#Random offset
 			bits = int2binary(ord(b[ran]),8)	#Int to Binary
-			flipped = bits[::-1]				#Bit-flip
+			flipped = bits[::-1]			#Bit-flip
 			b[ran] = chr(int(flipped,2))		#Replace
-		mutated =''.join(b)						#Append
+		mutated =''.join(b)				#Append
 	return mutated
 def AccessViolationHandler (dbg):
 	print '[+] BOOM!! Target Crashed'
@@ -76,7 +76,7 @@ def AccessViolationHandler (dbg):
 	crash_binn = utils.crash_binning.crash_binning()
 	crash_binn.record_crash(dbg)
 	currtime = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
-	crashfilename = 'crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+'_'+ currtime +'.html'
+	crashfilename = 'crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+'_'+ currtime + '.' + ext
 	synfilename = 'crashes\\crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+'_'+ currtime +'.txt'
 	shutil.copyfile(temp_file_path + fuzzfilename,'crashes\\'+crashfilename)
 	print '[+] Crash file Copied',crashfilename
