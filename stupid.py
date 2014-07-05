@@ -36,6 +36,16 @@ command_line_arg = ""							# Command line arguments (if any required for progra
 fuzzratio = float(0.09)							# percentage of file size bytes to fuzz
 
 ###############################################################################################################
+def printBanner():
+	print '''
+	  ____  _               _     _ 
+	 / ___|| |_ _   _ _ __ (_) __| |
+	 \___ \| __| | | | '_ \| |/ _` |
+	  ___) | |_| |_| | |_) | | (_| |
+	 |____/ \__|\__,_| .__/|_|\__,_|
+                         |_|            
+   The dumbest file format Fuzzer in the whole world!!
+	   Author : Debasish Mandal \n\n'''
 crash_binning = utils.crash_binning.crash_binning()
 def int2binary(n, cnt=24):
     return "".join([str((n >> y) & 1) for y in range(cnt-1, -1, -1)])
@@ -82,6 +92,8 @@ def StillRunning(dbg):
 		dbg.terminate_process()
 
 def startfuzzer():
+	printBanner()
+	raw_input('[+] Press Enter to Continue...')
 	c = 1
 	if len(basefilelist) == 0:
 		print '[+] No base files @ ',basefile_dir
