@@ -62,17 +62,16 @@ def mutate(data):
 	return mutated
 def AccessViolationHandler (dbg):
 	print '[+] BOOM!! Target Crashed'
-	global crash_binning
-	crash_binning.record_crash(dbg)
-	basefile = basefilename.split('\\',basefilename.count('\\'))[-1:][0]
-	print '[+] Base file',basefile
+	global crash_binn
+	crash_binn = utils.crash_binning.crash_binning()
+	crash_binn.record_crash(dbg)
 	currtime = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
-	crashfilename = 'crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+basefile+'_'+ currtime +'.'+basefile.split('.',1)[1]
-	synfilename = 'crashes\\crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+basefile+'_'+ currtime +'.txt'
-	shutil.copyfile(temp_dir+fuzzfilename,'crashes\\'+crashfilename)
+	crashfilename = 'crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+'_'+ currtime +'.html'
+	synfilename = 'crashes\\crash_'+programname.split('\\',programname.count('\\'))[-1]+'_'+'_'+ currtime +'.txt'
+	shutil.copyfile(temp_file_path + fuzzfilename,'crashes\\'+crashfilename)
 	print '[+] Crash file Copied',crashfilename
 	syn = open(synfilename,'w')
-	syn.write(crash_binning.last_crash_synopsis())
+	syn.write(crash_binn.last_crash_synopsis())
 	syn.close()
 	if dbg.debugger_active:
 		dbg.terminate_process()
