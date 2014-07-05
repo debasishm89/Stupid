@@ -1,0 +1,97 @@
+[INVALID]:0795f7e0 test [0x43e0100],eax from thread 7464 caused access violation
+when attempting to read from 0x043e0100
+
+CONTEXT DUMP
+  EIP: 0795f7e0 test [0x43e0100],eax
+  EAX: 0789ef90 ( 126480272) -> S1n3f32XS12S17X+s8x5s8S1E1X428mmmSSm8gmmlgzgthg{30,L1HS1@E1S1E10Rgh (stack)
+  EBX: ffffffe1 (4294967265) -> N/A
+  ECX: 31b153b8 ( 833704888) -> Ss8S1q8  (heap)
+  EDX: 00000013 (        19) -> N/A
+  EDI: 31b153b8 ( 833704888) -> Ss8S1q8  (heap)
+  ESI: 00000005 (         5) -> N/A
+  EBP: 0789efe4 ( 126480356) -> S1E1X428mmmSSm8gmmlgzgthg{30,L1HS1@E1S1E10RghL1<S1L1R1@42mb0D1D1 L1SX@ao3 (stack)
+  ESP: 0789efac ( 126480300) -> 2XS12S17X+s8x5s8S1E1X428mmmSSm8gmmlgzgthg{30,L1HS1@E1S1E10RghL1<S1L1 (stack)
+  +00: 078a3207 ( 126497287) -> N/A
+  +04: 00000007 (         7) -> N/A
+  +08: 31b15358 ( 833704792) -> n8(2.5.4.5=Ss8S1q8  (heap)
+  +0c: 078a3207 ( 126497287) -> N/A
+  +10: 00000013 (        19) -> N/A
+  +14: 31b153b8 ( 833704888) -> Ss8S1q8  (heap)
+
+disasm around:
+	0x0795f7bc and esi,0x7
+	0x0795f7bf cmp esi,0x5
+	0x0795f7c2 jz 0x795f7dc
+	0x0795f7c8 mov esi,[eax]
+	0x0795f7ca test esi,esi
+	0x0795f7cc jz 0x795f7dc
+	0x0795f7d2 cmpxchg [edi],esi
+	0x0795f7d6 jnz 0x795f80f
+	0x0795f7dc add esp,0x48
+	0x0795f7df pop ebp
+	0x0795f7e0 test [0x43e0100],eax
+	0x0795f7e6 ret
+	0x0795f7e7 mov [esp+0x4],ecx
+	0x0795f7eb mov [esp],esi
+	0x0795f7ee call 0x792f1c0
+	0x0795f7f3 jmp 0x795f769
+	0x0795f7f8 call 0x792d8d0
+	0x0795f7fd call 0x792d8d0
+	0x0795f802 call 0x792d8d0
+	0x0795f807 mov [esp],esi
+	0x0795f80a call 0x792d5d0
+
+stack unwind:
+	[INVALID]:07999d14
+	[INVALID]:078a339a
+	[INVALID]:078a339a
+	[INVALID]:078a339a
+	[INVALID]:078a334f
+	[INVALID]:0794e214
+	[INVALID]:078a39f9
+	[INVALID]:078a339a
+	[INVALID]:078a339a
+	[INVALID]:078a339a
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a3207
+	[INVALID]:078a339a
+	[INVALID]:078a339a
+	[INVALID]:078a3304
+	[INVALID]:078a3304
+	[INVALID]:078a3304
+	[INVALID]:078a347b
+	[INVALID]:078a347b
+	[INVALID]:078a3785
+	[INVALID]:078a03d7
+	jvm.dll:67f60e6a
+	jvm.dll:6802529e
+	jvm.dll:67f61035
+	jvm.dll:67f61097
+	jvm.dll:67f0c49f
+	jvm.dll:67f822dc
+	jvm.dll:67f82d37
+	jvm.dll:67fc71e9
+	msvcr100.dll:686cc556
+	msvcr100.dll:686cc600
+	IEShims.dll:72d831cc
+	kernel32.dll:75efee1c
+	ntdll.dll:771937eb
+	ntdll.dll:771937be
+
+SEH unwind:
+	0789fd8c -> jvm.dll:680b545e mov edi,edi
+	0789fdc4 -> jvm.dll:680b545e mov edi,edi
+	0789fe48 -> msvcr100.dll:686fb65a mov edi,edi
+	0789fe68 -> ntdll.dll:7714e115 mov edi,edi
+	ffffffff -> ntdll.dll:771eac12 mov edi,edi
+
