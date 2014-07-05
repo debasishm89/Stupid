@@ -1,9 +1,6 @@
 Stupid v0.1 - The dumbest file format fuzzer in the whole world
 ===============================================================
 
-![Alt text](http://1.bp.blogspot.com/-pP0pSl5dTp4/U7fY1275h2I/AAAAAAAAA3Q/pi00kVZCR0I/s1600/1.png)
-
-
 Stupid was developed in late 2011 to automate fuzzing of different file formats( mainly Music/Video Players etc).
 
 Licence
@@ -22,6 +19,9 @@ Debasish Mandal <debasishm89 [at] gmail.com> wrote this file. As long as you ret
 Running this Fuzzer
 ===================
 This was developed and tested with **Python 2.7(x86)**. So it's recommended to use the same version of python. Also make sure **pydbg(x86)** also installed on the system. 
+
+![Alt text](http://1.bp.blogspot.com/-pP0pSl5dTp4/U7fY1275h2I/AAAAAAAAA3Q/pi00kVZCR0I/s1600/1.png)
+
 
 You need to provide the target application binary path (.exe) and at least one base file to run this fuzzer. You can to modify the configuration section of "stupid.py" as per your requirement.
 
