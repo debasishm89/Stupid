@@ -5,13 +5,17 @@ Stupid was developed in late 2011 to automate fuzzing of different file formats(
 
 Licence
 =======
-This software is licenced under a Beerware licence although the following libraries are included with Stupid and are licensed separately.
+This software is licenced under **BEER WARE** licence although the following libraries are included with Stupid and are licensed separately.
 
 - pydbg
 - paimei - https://github.com/pedramamini/paimei
 
 
 **"THE BEER-WARE LICENSE" (Revision 42):**
+
+
+![Alt text](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/BeerWare_Logo.svg/170px-BeerWare_Logo.svg.png)
+
 
 Debasish Mandal <debasishm89 [at] gmail.com> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return Debasish Mandal.
 
