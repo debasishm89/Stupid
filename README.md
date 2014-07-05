@@ -46,6 +46,8 @@ Reprducing Crashes
 ==================
 Crash files and crash information can be found in "Crashes" folder which can be used to reproduce app crashes.
 
+**Sample Crash Synopsis File**
+
 ![Alt text](http://1.bp.blogspot.com/-gytAL33g-aI/U7gYR5unVVI/AAAAAAAAA3g/4cem3roDNnI/s1600/1.png)
 
 Bug Fixes/Thanks/Hate Emails
