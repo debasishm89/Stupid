@@ -1,12 +1,19 @@
 Stupid v0.1 - The dumbest file format fuzzer in the whole world
 ===============================================================
-Stupid was developed in late 2011 to fuzz different file formats( mainly Music/Video Players etc) and It's released under BEER WARE licence.
+Stupid was developed in late 2011 to automate fuzzing of different file formats( mainly Music/Video Players etc).
 
 Licence
 =======
-This software is licenced under a Beerware licence. 
-THE BEER-WARE LICENSE" (Revision 42):
+This software is licenced under a Beerware licence althouhg the following libraries are included with Stupid and are licensed separately.
+
+- pydbg
+- paimei - https://github.com/pedramamini/paimei
+
+
+**"THE BEER-WARE LICENSE" (Revision 42):**
+
 <debasishm89 [at] gmail.com> wrote this file. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return Debasish Mandal.
+
 
 Running this Fuzzer
 ===================
@@ -17,8 +24,9 @@ You need to provide the target application binary path (.exe) and at least one b
 Test Case Generation
 ====================
 mutate() function is actually responsible for generating testcases from given bases files. It has two sub parts
-1. Bitflip 
-2. Random Byte Flip
+
+- Bitflip 
+- Random Byte Flip
 
 You may want to change / modify these functions to make this fuzzer more effective. ;)
 
