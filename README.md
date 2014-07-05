@@ -4,7 +4,7 @@ Stupid was developed in late 2011 to automate fuzzing of different file formats(
 
 Licence
 =======
-This software is licenced under a Beerware licence althouhg the following libraries are included with Stupid and are licensed separately.
+This software is licenced under a Beerware licence although the following libraries are included with Stupid and are licensed separately.
 
 - pydbg
 - paimei - https://github.com/pedramamini/paimei
@@ -17,24 +17,24 @@ This software is licenced under a Beerware licence althouhg the following librar
 
 Running this Fuzzer
 ===================
-This was developed and tested with Python 2.7(x86). So it's recommended to use the same version of python. Also make sure pydbg(x86) also installed on the system. 
+This was developed and tested with **Python 2.7(x86)**. So it's recommended to use the same version of python. Also make sure **pydbg(x86)** also installed on the system. 
 
 You need to provide the target application binary path (.exe) and at least one base file to run this fuzzer. You can to modify the configuration section of "stupid.py" as per your requirement.
 
 Test Case Generation
 ====================
-mutate() function is actually responsible for generating testcases from given bases files. It has two sub parts
+**mutate()** routine is responsible for generating test cases from given bases files. It has two sub parts
 
 - Bitflip 
 - Random Byte Flip
 
-You may want to change / modify these functions to make this fuzzer more effective. ;)
+**You may want to change / modify these functions to make this fuzzer more effective. ;)**
 
 Monitoring
 ==========
-To monitor target application for different types of crahses (access violation), Stupid uses pydbg(Python debugger). Also it uses utils of https://github.com/pedramamini/paimei framework to collect crash information which can be used later to identify interesting app crashes.
+To monitor target application for different types of crashes (access violation), Stupid uses **pydbg**(Python debugger). Also it uses **utils** of https://github.com/pedramamini/paimei framework to collect crash information which can be used later to identify interesting app crashes.
 
-Reprducing Crases
+Reprducing Crashes
 ==================
 
 Crash files and crash information can be found in "Crashes" folder which can be used to reproduce app crashes.
