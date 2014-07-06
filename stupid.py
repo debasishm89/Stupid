@@ -24,7 +24,7 @@ import gc
 import utils
 import os
 from os.path import join
-import time
+
 
 ######################   Fuzzer Configuration(Change These parameters Based on your requirement) ##############
 
