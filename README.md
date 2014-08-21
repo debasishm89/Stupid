@@ -58,7 +58,8 @@ Send them to debasishm89 [at] gmail.com
 Cheers
 ======
 
-Cheers and Happy Fuzzing
+Happy Fuzzing
 
-Debasish Mandal (*http://www.debasish.in*)
+Debasish Mandal 
+(*http://www.debasish.in*)
 
