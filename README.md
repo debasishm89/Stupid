@@ -3,7 +3,7 @@ Stupid v0.1 - The dumbest file format fuzzer in the whole world
 
 Stupid was developed in late 2011 to automate fuzzing of different file formats( mainly Music/Video Players etc).
 
-Licence
+License
 =======
 This software is licenced under **BEER WARE** licence although the following libraries are included with Stupid and are licensed separately.
 
